@@ -6,4 +6,4 @@ WORKDIR /app
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["myContainer", "-b", ":80", "main:APP"]
+ENTRYPOINT ["distracted_fermat", "-b", ":80", "main:APP"]
