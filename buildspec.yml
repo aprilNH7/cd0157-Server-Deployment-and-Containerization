@@ -7,7 +7,11 @@ env:
 phases:
   build:
     commands:
-      - "docker build --tag $REPOSITORY_URI:$TAG ."
+      - ls -altr
+      - echo $REPOSITORY_URI
+      - echo $TAG
+      - ECR_REPO="simple_jwt_api"
+      - docker build --tag $ECR_REPO:$TAG .
   install:
     commands:
       - "echo 'about to call dockerd'"
