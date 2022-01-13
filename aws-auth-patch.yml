@@ -1,23 +1,21 @@
-# This is a sample aws-auth-patch.yml file. 
-# Actual aws-auth-patch.yml will be created at /System/Volumes/Data/private/tmp/aws-auth-patch.yml path.
-
 apiVersion: v1
 data:
   mapRoles: |
-    -groups:
-      - system:bootstrappers
-      -system:nodes
-      rolearn: arn:aws:iam::651956763484:role/eksctl-simple-jwt-api-cluster-ServiceRole-WTNK0QTNTLIV
-      username: system:node:{{EC2PrivateDNSName}}
     - groups:
       - system:masters
-      - system:nodes
       rolearn: arn:aws:iam::651956763484:role/UdacityFlaskDeployCBKubectlRole
       username: build
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::651956763484:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-1LA1NQ5KJ8R65
+      username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+     []
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2021-12-14T20:26:59Z"
+  creationTimestamp: "2021-12-21T17:22:28Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1332"
-  uid: 7bb949e2-cc8f-4ce6-a0c8-bb80c9af2484
+  resourceVersion: "1616"
+  uid: 84cfd037-4af2-409c-acfe-e6b5d2468093
