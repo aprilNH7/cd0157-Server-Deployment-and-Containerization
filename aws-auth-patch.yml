@@ -11,11 +11,11 @@ data:
       rolearn: arn:aws:iam::651956763484:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-1LA1NQ5KJ8R65
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
-     []
+    []
 kind: ConfigMap
 metadata:
   creationTimestamp: "2021-12-21T17:22:28Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1616"
+  resourceVersion: "6702999"
   uid: 84cfd037-4af2-409c-acfe-e6b5d2468093
