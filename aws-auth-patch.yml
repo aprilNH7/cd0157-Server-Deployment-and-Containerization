@@ -18,4 +18,5 @@ metadata:
   name: aws-auth
   namespace: kube-system
   resourceVersion: "2994"
+  selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth  
   uid: 5ce98b9e-1532-4f3b-99cc-44d0ba841c8f
